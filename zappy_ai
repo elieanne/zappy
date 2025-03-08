@@ -1,0 +1,31 @@
+#!/usr/bin/env python3.10
+
+from sys import exit
+from signal import signal, SIGINT
+from ai.src.utils.args import parse_args
+from ai.src.client.connection import launch_connection
+from ai.src.bot.bot import Bot
+
+
+def exit_loop(signal_received, frame):
+    exit(84)
+
+
+def main() -> int:
+    """Main function.
+    :return: 0 if the program exited successfully, 84 otherwise
+    """
+    args: tuple[int, str, str, str] | None = parse_args()
+    if args is None:
+        return 84
+    port, name, host, conf = args
+    signal(SIGINT, exit_loop)
+    try:
+        return launch_connection(Bot(port, name, host, conf))
+    except Exception as error:
+        print(error)
+        return 84
+
+
+if __name__ == "__main__":
+    exit(main())

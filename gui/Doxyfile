@@ -1,0 +1,55 @@
+# General configuration options
+PROJECT_NAME           = Zappy [GUI]
+PROJECT_NUMBER         =
+OUTPUT_DIRECTORY       = doc
+OPTIMIZE_OUTPUT_FOR_C  = YES
+EXTRACT_ALL            = YES
+EXTRACT_PRIVATE        = YES
+EXTRACT_STATIC         = YES
+GENERATE_HTML          = YES
+GENERATE_LATEX         = YES
+GENERATE_XML           = YES
+WARNINGS               = YES
+WARN_IF_UNDOCUMENTED   = YES
+WARN_IF_DOC_ERROR      = YES
+
+# Diagram options
+HAVE_DOT               = YES
+CLASS_GRAPH            = YES
+COLLABORATION_GRAPH    = YES
+UML_LOOK               = YES
+UML_LIMIT_NUM_FIELDS   = 30
+TEMPLATE_RELATIONS     = YES
+
+# Include paths
+INCLUDE_PATH           = .
+
+# Source code files
+FILE_PATTERNS          = *.hpp *.cpp
+RECURSIVE              = YES
+EXCLUDE_PATTERNS       = */build/* */test/*
+
+# Output format options
+HTML_TIMESTAMP         = NO
+LATEX_TIMESTAMP        = NO
+USE_PDFLATEX           = YES
+
+# Index options
+GENERATE_TREEVIEW      = YES
+ENUM_VALUES_PER_LINE   = 4
+
+# Configuration for LaTeX output
+LATEX_SOURCE_CODE      = YES
+LATEX_OUTPUT           = latex
+LATEX_CMD_NAME_PATTERN = ./latex/refman
+GENERATE_LATEX         = YES
+LATEX_BATCHMODE        = YES
+HTML_DYNAMIC_MENUS = YES
+
+# Preprocessor settings
+ENABLE_PREPROCESSING   = YES
+MACRO_EXPANSION        = YES
+EXPAND_ONLY_PREDEF     = YES
+SEARCH_INCLUDES        = YES
+INCLUDE_GRAPH          = YES
+INCLUDED_BY_GRAPH      = YES
